@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phục hồi Chức năng - Trung tâm Hiếu An</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            background: linear-gradient(rgba(46, 125, 50, 0.9), rgba(46, 125, 50, 0.7)),
+                url('images/Hieu An photo-004.jpg') center/cover;
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+            margin-bottom: 60px;
+        }
+
+        .service-detail-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+            margin-bottom: 80px;
+        }
+
+        .content-main h2 {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-bottom: 30px;
+        }
+
+        .therapy-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 25px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .therapy-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--bg-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-green);
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+
+        .sidebar-card {
+            background: var(--primary-green);
+            color: white;
+            padding: 35px;
+            border-radius: 20px;
+            position: sticky;
+            top: 120px;
+        }
+
+        @media (max-width: 992px) {
+            .service-detail-container {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar-card {
+                position: static;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/HA_Logo_Ngang_300DPI_RGB.png" alt="Logo Trung tâm Hiếu An">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="about.html">Về chúng tôi</a></li>
+                    <li><a href="services.html" class="active">Dịch vụ</a></li>
+                    <li><a href="news.html">Tin tức</a></li>
+                    <li><a href="brand.html">Thương hiệu</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="btn btn-primary">Tư vấn miễn phí</a>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Phục hồi Chức năng & Vật lý Trị liệu</h1>
+            <p>Hành trình tìm lại vận động, nâng cao chất lượng cuộc sống</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="service-detail-container">
+            <div class="content-main">
+                <h2>Cá nhân hóa lộ trình phục hồi</h2>
+                <p>Tại Hiếu An, mỗi bệnh nhân đều có một phác đồ phục hồi riêng biệt, được xây dựng bởi các chuyên gia
+                    vật lý trị liệu giàu kinh nghiệm. Chúng tôi kết hợp giữa thiết bị hiện đại và kỹ thuật xoa bóp, vận
+                    động bằng tay để đạt hiệu quả tối ưu.</p>
+
+                <img src="images/Hieu An photo-004.jpg" alt="Vật lý trị liệu"
+                    style="border-radius: 20px; margin: 20px 0;">
+
+                <h3>Các hạng mục trị liệu chính</h3>
+
+                <div class="therapy-card">
+                    <div class="therapy-icon"><i class="fas fa-walking"></i></div>
+                    <div>
+                        <h4>Vật lý trị liệu vận động</h4>
+                        <p>Hỗ trợ phục hồi sau tai biến, chấn thương hoặc các bệnh lý xương khớp thường gặp ở người già.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="therapy-card">
+                    <div class="therapy-icon"><i class="fas fa-hand-holding-medical"></i></div>
+                    <div>
+                        <h4>Xoa bóp & Bấm huyệt Đông y</h4>
+                        <p>Giúp lưu thông khí huyết, giảm đau nhức và cải thiện giấc ngủ một cách tự nhiên.</p>
+                    </div>
+                </div>
+
+                <div class="therapy-card">
+                    <div class="therapy-icon"><i class="fas fa-heartbeat"></i></div>
+                    <div>
+                        <h4>Hoạt động trị liệu</h4>
+                        <p>Các bài tập hỗ trợ thực hiện các kỹ năng sinh hoạt hàng ngày, giúp người cao tuổi tự tin hơn.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="sidebar-card">
+                    <h3 style="color: white; margin-bottom: 20px;">Đặt lịch tư vấn</h3>
+                    <p style="margin-bottom: 25px;">Chuyên gia của chúng tôi sẽ đánh giá tình trạng hiện tại và đưa ra
+                        lời khuyên về lộ trình phục hồi phù hợp nhất cho ông bà.</p>
+                    <a href="contact.html" class="btn"
+                        style="background: white; color: var(--primary-green); width:100%; font-weight: 700;">Hẹn lịch
+                        ngay</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <!-- ... Footer same as others ... -->
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div
+                        style="background: white; padding: 10px; border-radius: 8px; display: inline-block; margin-bottom: 15px;">
+                        <img src="images/HA_Logo_Ngang_300DPI_RGB.png" alt="Logo Footer"
+                            style="height: 40px; display: block;">
+                    </div>
+                    <p>Trung tâm Dưỡng lão và Điều dưỡng Hiếu An - Nơi trao gửi niềm tin, trọn vẹn chữ Hiếu.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Liên kết nhanh</h4>
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="about.html">Về chúng tôi</a></li>
+                        <li><a href="services.html">Dịch vụ</a></li>
+                        <li><a href="brand.html">Thương hiệu</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Liên hệ</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Lô 72 + 73 Đường 23, KĐT Thành phố Giao lưu, HN</li>
+                        <li><i class="fas fa-phone"></i> +84 866 779 369</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

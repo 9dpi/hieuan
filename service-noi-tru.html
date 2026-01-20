@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chăm sóc Nội trú - Trung tâm Hiếu An</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            background: linear-gradient(rgba(46, 125, 50, 0.9), rgba(46, 125, 50, 0.7)),
+                url('images/Hieu An photo-005.jpg') center/cover;
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+            margin-bottom: 60px;
+        }
+
+        .service-detail-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+            margin-bottom: 80px;
+        }
+
+        .content-main h2 {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-bottom: 30px;
+        }
+
+        .content-main p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .feature-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .feature-list i {
+            color: var(--primary-orange);
+            font-size: 1.2rem;
+        }
+
+        .sidebar-card {
+            background: #fdfdfd;
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid #eee;
+            position: sticky;
+            top: 120px;
+        }
+
+        .sidebar-card h3 {
+            margin-bottom: 20px;
+            color: var(--primary-green);
+        }
+
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .schedule-table td {
+            padding: 10px;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        .schedule-table td:first-child {
+            font-weight: 700;
+            color: var(--primary-orange);
+            width: 100px;
+        }
+
+        @media (max-width: 992px) {
+            .service-detail-container {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar-card {
+                position: static;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/HA_Logo_Ngang_300DPI_RGB.png" alt="Logo Trung tâm Hiếu An">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="about.html">Về chúng tôi</a></li>
+                    <li><a href="services.html" class="active">Dịch vụ</a></li>
+                    <li><a href="news.html">Tin tức</a></li>
+                    <li><a href="brand.html">Thương hiệu</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="btn btn-primary">Tư vấn miễn phí</a>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Chăm sóc Nội trú Dài hạn</h1>
+            <p>Môi trường sống như tại gia đình với sự tận tâm tuyệt đối</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="service-detail-container">
+            <div class="content-main">
+                <h2>Ngôi nhà thứ hai ấm áp và an toàn</h2>
+                <p>Dịch vụ chăm sóc nội trú tại Hiếu An không chỉ là cung cấp một nơi ở, mà là kiến tạo một lối sống
+                    khỏe mạnh, vui tươi cho người cao tuổi. Chúng tôi tập trung vào việc duy trì sức khỏe thể chất kết
+                    hợp nuôi dưỡng đời sống tinh thần phong phú.</p>
+
+                <img src="images/Hieu An photo-014.jpg" alt="Phòng ở tiện nghi"
+                    style="border-radius: 20px; margin: 20px 0;">
+
+                <h3>Quyền lợi của người cao tuổi</h3>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle"></i> <span>Chế độ dinh dưỡng khoa học, phù hợp với bệnh lý từng
+                            người.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span>Theo dõi các chỉ số sinh tồn (huyết áp, đường
+                            huyết...) hàng ngày.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span>Hỗ trợ sinh hoạt cá nhân chuyên nghiệp và nhẹ
+                            nhàng.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span>Tham gia các câu lạc bộ giải trí, sinh hoạt cộng đồng
+                            thường xuyên.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span>Không gian xanh mát, yên tĩnh, đảm bảo an ninh
+                            24/7.</span></li>
+                </ul>
+
+                <h3>Môi trường sống</h3>
+                <p>Hệ thống phòng ở được thiết kế đặc thù cho người cao tuổi với tay vịn hành lang, chuông báo khẩn cấp
+                    tại đầu giường và trong nhà vệ sinh. Ánh sáng tự nhiên và thông gió được tối ưu hóa để đảm bảo sức
+                    khỏe tốt nhất.</p>
+            </div>
+
+            <div class="sidebar">
+                <div class="sidebar-card">
+                    <h3>Lịch sinh hoạt mẫu</h3>
+                    <table class="schedule-table">
+                        <tr>
+                            <td>06h00</td>
+                            <td>Thức dậy, vệ sinh cá nhân, thể dục sáng</td>
+                        </tr>
+                        <tr>
+                            <td>07h30</td>
+                            <td>Ăn sáng, dùng thuốc (theo chỉ định)</td>
+                        </tr>
+                        <tr>
+                            <td>09h00</td>
+                            <td>Kiểm tra y tế & Hoạt động CLB</td>
+                        </tr>
+                        <tr>
+                            <td>11h30</td>
+                            <td>Ăn trưa & Nghỉ trưa</td>
+                        </tr>
+                        <tr>
+                            <td>14h30</td>
+                            <td>Ăn nhẹ & Trà chiều</td>
+                        </tr>
+                        <tr>
+                            <td>16h00</td>
+                            <td>Vận động nhẹ hoặc dạo bộ sân vườn</td>
+                        </tr>
+                        <tr>
+                            <td>18h00</td>
+                            <td>Ăn tối & Xem tin tức</td>
+                        </tr>
+                        <tr>
+                            <td>21h00</td>
+                            <td>Nghỉ ngơi</td>
+                        </tr>
+                    </table>
+                    <a href="contact.html" class="btn btn-primary" style="width: 100%; margin-top: 30px;">Đăng ký tham
+                        quan</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div
+                        style="background: white; padding: 10px; border-radius: 8px; display: inline-block; margin-bottom: 15px;">
+                        <img src="images/HA_Logo_Ngang_300DPI_RGB.png" alt="Logo Footer"
+                            style="height: 40px; display: block;">
+                    </div>
+                    <p>Trung tâm Dưỡng lão và Điều dưỡng Hiếu An - Nơi trao gửi niềm tin, trọn vẹn chữ Hiếu.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Liên kết nhanh</h4>
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="about.html">Về chúng tôi</a></li>
+                        <li><a href="services.html">Dịch vụ</a></li>
+                        <li><a href="brand.html">Thương hiệu</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Liên hệ</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Lô 72 + 73 Đường 23, KĐT Thành phố Giao lưu, HN</li>
+                        <li><i class="fas fa-phone"></i> +84 866 779 369</li>
+                        <li><i class="fas fa-envelope"></i> contact@dieuduonghieuan.com</li>
+                        <li><i class="fas fa-globe"></i> www.dieuduonghieuan.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">&copy; 2025 Trung tâm Hiếu An. All rights reserved.</div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
