@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin tức - Trung tâm Hiếu An</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            background: linear-gradient(rgba(244, 143, 41, 0.9), rgba(244, 143, 41, 0.7)),
+                url('https://images.unsplash.com/photo-1557825835-b55af7b6534e?auto=format&fit=crop&w=1600&q=80') center/cover;
+            padding: 80px 0;
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: 0.3s;
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-thumb {
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .news-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .news-card:hover .news-thumb img {
+            transform: scale(1.1);
+        }
+
+        .news-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-date {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 10px;
+        }
+
+        .news-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .news-title:hover {
+            color: var(--primary-orange);
+        }
+
+        .news-excerpt {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .read-more {
+            color: var(--primary-green);
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 80px;
+        }
+
+        .page-item {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: white;
+            border: 1px solid #eee;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .page-item.active,
+        .page-item:hover {
+            background: var(--primary-orange);
+            color: white;
+            border-color: var(--primary-orange);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/HA_Logo_Ngang_300DPI_RGB.png" alt="Logo Trung tâm Hiếu An">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="about.html">Về chúng tôi</a></li>
+                    <li><a href="services.html">Dịch vụ</a></li>
+                    <li><a href="news.html" class="active" style="color: var(--primary-orange);">Tin tức</a></li>
+                    <li><a href="brand.html">Thương hiệu</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="btn btn-primary">Tư vấn miễn phí</a>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Tin Tức & Hoạt Động</h1>
+            <p>Cập nhật những thông tin mới nhất và khoảnh khắc đáng nhớ tại Hiếu An</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="news-grid">
+
+            <!-- Article 1 -->
+            <article class="news-card">
+                <div class="news-thumb">
+                    <img src="images/Hieu An photo-007.jpg" alt="News 1">
+                </div>
+                <div class="news-content">
+                    <div class="news-date"><i class="far fa-calendar-alt"></i> 10/10/2023</div>
+                    <h3 class="news-title"><a href="#">Tưng bừng tổ chức lễ mừng thọ cho các cụ tại trung tâm</a></h3>
+                    <p class="news-excerpt">Không khí ấm cúng, tràn ngập tiếng cười trong buổi lễ mừng thọ tháng 10 vừa
+                        qua...</p>
+                    <a href="#" class="read-more">Xem chi tiết <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="news-card">
+                <div class="news-thumb">
+                    <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=800&q=80"
+                        alt="News 2">
+                </div>
+                <div class="news-content">
+                    <div class="news-date"><i class="far fa-calendar-alt"></i> 05/10/2023</div>
+                    <h3 class="news-title"><a href="#">Bí quyết dinh dưỡng giúp người cao tuổi sống khỏe mỗi ngày</a>
+                    </h3>
+                    <p class="news-excerpt">Chuyên gia dinh dưỡng tại Hiếu An chia sẻ thực đơn vàng dành cho người trên
+                        70 tuổi...</p>
+                    <a href="#" class="read-more">Xem chi tiết <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="news-card">
+                <div class="news-thumb">
+                    <img src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=800&q=80"
+                        alt="News 3">
+                </div>
+                <div class="news-content">
+                    <div class="news-date"><i class="far fa-calendar-alt"></i> 01/10/2023</div>
+                    <h3 class="news-title"><a href="#">Lợi ích của Thiền dưỡng sinh đối với sức khỏe tinh thần</a></h3>
+                    <p class="news-excerpt">Các buổi tập thiền sáng sớm mang lại năng lượng tích cực và sự thư thái cho
+                        các cụ...</p>
+                    <a href="#" class="read-more">Xem chi tiết <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- Article 4 -->
+            <article class="news-card">
+                <div class="news-thumb">
+                    <img src="images/Hieu An photo-012.jpg" alt="News 4">
+                </div>
+                <div class="news-content">
+                    <div class="news-date"><i class="far fa-calendar-alt"></i> 25/09/2023</div>
+                    <h3 class="news-title"><a href="#">Tuyển dụng Điều dưỡng viên tháng 10/2025</a></h3>
+                    <p class="news-excerpt">Trung tâm Hiếu An chào đón các ứng viên có tâm và chuyên môn tham gia vào
+                        đội ngũ...</p>
+                    <a href="#" class="read-more">Xem chi tiết <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="pagination">
+            <a href="#" class="page-item active">1</a>
+            <a href="#" class="page-item">2</a>
+            <a href="#" class="page-item">3</a>
+            <a href="#" class="page-item"><i class="fas fa-chevron-right"></i></a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div
+                        style="background: white; padding: 10px; border-radius: 8px; display: inline-block; margin-bottom: 15px;">
+                        <img src="images/HA_Logo_Ngang_300DPI_RGB.png" alt="Logo Footer"
+                            style="height: 40px; display: block;">
+                    </div>
+                    <p>Trung tâm Dưỡng lão và Điều dưỡng Hiếu An - Nơi trao gửi niềm tin, trọn vẹn chữ
+                        Hiếu.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Liên kết nhanh</h4>
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="about.html">Về chúng tôi</a></li>
+                        <li><a href="services.html">Dịch vụ</a></li>
+                        <li><a href="news.html">Tin tức</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Liên hệ</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Lô 72 + 73 Đường 23, KĐT Thành phố Giao lưu, P. Đông
+                            Ngạc, HN</li>
+                        <li><i class="fas fa-phone"></i> +84 866 779 369</li>
+                        <li><i class="fas fa-envelope"></i> contact@dieuduonghieuan.com</li>
+                        <li><i class="fas fa-globe"></i> www.dieuduonghieuan.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Trung tâm Hiếu An. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

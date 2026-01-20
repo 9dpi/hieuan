@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch vụ - Trung tâm Hiếu An</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Lora:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            background: linear-gradient(rgba(244, 143, 41, 0.9), rgba(244, 143, 41, 0.7)),
+                url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1600&q=80') center/cover;
+            padding: 80px 0;
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-detail-card {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 60px;
+            align-items: center;
+        }
+
+        .service-detail-card:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .service-img {
+            flex: 1;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            height: 350px;
+        }
+
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .service-text {
+            flex: 1;
+        }
+
+        .service-text h3 {
+            color: var(--primary-green);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .service-text ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .service-text ul li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cta-section {
+            background-color: var(--bg-light);
+            padding: 60px;
+            text-align: center;
+            border-radius: 20px;
+            margin-bottom: 80px;
+        }
+
+        @media (max-width: 768px) {
+
+            .service-detail-card,
+            .service-detail-card:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .service-img {
+                width: 100%;
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/HA_Logo_Ngang_300DPI_RGB.png" alt="Logo Trung tâm Hiếu An">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="about.html">Về chúng tôi</a></li>
+                    <li><a href="services.html" class="active" style="color: var(--primary-orange);">Dịch vụ</a></li>
+                    <li><a href="news.html">Tin tức</a></li>
+                    <li><a href="brand.html">Thương hiệu</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="btn btn-primary">Tư vấn miễn phí</a>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Hệ Thống Dịch Vụ</h1>
+            <p>Giải pháp chăm sóc toàn diện, chuyên nghiệp và đẳng cấp</p>
+        </div>
+    </section>
+
+    <section class="container">
+
+        <!-- Dịch vụ 1 -->
+        <div class="service-detail-card">
+            <div class="service-img">
+                <img src="images/Hieu An photo-005.jpg" alt="Chăm sóc nội trú">
+            </div>
+            <div class="service-text">
+                <h3>Chăm sóc nội trú dài hạn</h3>
+                <p>Dành cho người cao tuổi cần sự hỗ trợ sinh hoạt 24/7. Chúng tôi tạo ra một môi trường sống tiện nghi,
+                    ấm cúng như gia đình nhưng an toàn hơn nhờ sự giám sát y tế liên tục.</p>
+                <ul>
+                    <li><i class="fas fa-check-circle" style="color: var(--primary-orange);"></i> Phòng ở tiện nghi,
+                        sạch sẽ, thoáng mát.</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--primary-orange);"></i> Chế độ dinh dưỡng
+                        thiết kế riêng biệt.</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--primary-orange);"></i> Theo dõi sức khỏe hàng
+                        ngày (Huyết áp, tim mạch...).</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--primary-orange);"></i> Hỗ trợ vệ sinh cá
+                        nhân, giặt giũ toàn diện.</li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary" style="margin-top: 20px;">Đăng ký tham quan</a>
+            </div>
+        </div>
+
+        <!-- Dịch vụ 2 -->
+        <div class="service-detail-card">
+            <div class="service-img">
+                <img src="images/Hieu An photo-003.jpg" alt="Chăm sóc bán trú">
+            </div>
+            <div class="service-text">
+                <h3>Chăm sóc bán trú (Daycare)</h3>
+                <p>Mô hình "Nhà trẻ cho người cao tuổi" tiên tiến. Sáng đưa đi, tối đón về. Giúp con cháu yên tâm làm
+                    việc mà ông bà vẫn có không gian giao lưu, bầu bạn, không bị cô đơn ở nhà.</p>
+                <ul>
+                    <li><i class="fas fa-check-circle" style="color: var(--primary-orange);"></i> Tham gia các CLB thơ,
+                        cờ, dưỡng sinh.</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--primary-orange);"></i> Bữa trưa và các bữa
+                        phụ dinh dưỡng.</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--primary-orange);"></i> Nghỉ trưa tại phòng
+                        tiêu chuẩn.</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--primary-orange);"></i> Xe đưa đón tận nơi
+                        (theo yêu cầu).</li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary" style="margin-top: 20px;">Tìm hiểu thêm</a>
+            </div>
+        </div>
+
+        <!-- Dịch vụ 3 -->
+        <div class="service-detail-card">
+            <div class="service-img">
+                <img src="images/Hieu An photo-004.jpg" alt="Phục hồi chức năng">
+            </div>
+            <div class="service-text">
+                <h3>Phục hồi chức năng</h3>
+                <p>Khôi phục khả năng vận động cho người sau tai biến, phẫu thuật hoặc chấn thương. Phác đồ tập luyện
+                    1:1 với kỹ thuật viên giàu kinh nghiệm.</p>
+                <ul>
+                    <li><i class="fas fa-check-circle" style="color: var(--primary-orange);"></i> Hệ thống máy tập đa
+                        năng, hiện đại.</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--primary-orange);"></i> Vật lý trị liệu kết
+                        hợp Y học cổ truyền.</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--primary-orange);"></i> Đánh giá tiến độ phục
+                        hồi hàng tuần.</li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary" style="margin-top: 20px;">Liên hệ tư vấn</a>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2 style="color: var(--primary-green); margin-bottom: 15px;">Bạn chưa biết gói dịch vụ nào phù hợp?</h2>
+            <p style="margin-bottom: 30px; font-size: 1.1rem;">Đừng ngần ngại, hãy để lại thông tin để chuyên gia của
+                Hiếu An tư vấn giải pháp tốt nhất cho gia đình bạn.</p>
+            <a href="contact.html" class="btn btn-primary">Tư vấn ngay</a>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div
+                        style="background: white; padding: 10px; border-radius: 8px; display: inline-block; margin-bottom: 15px;">
+                        <img src="images/HA_Logo_Ngang_300DPI_RGB.png" alt="Logo Footer"
+                            style="height: 40px; display: block;">
+                    </div>
+                    <p>Trung tâm Dưỡng lão và Điều dưỡng Hiếu An - Nơi trao gửi niềm tin, trọn vẹn chữ
+                        Hiếu.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Liên kết nhanh</h4>
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="about.html">Về chúng tôi</a></li>
+                        <li><a href="services.html">Dịch vụ</a></li>
+                        <li><a href="news.html">Tin tức</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Liên hệ</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Lô 72 + 73 Đường 23, KĐT Thành phố Giao lưu, P. Đông
+                            Ngạc, HN</li>
+                        <li><i class="fas fa-phone"></i> +84 866 779 369</li>
+                        <li><i class="fas fa-envelope"></i> contact@dieuduonghieuan.com</li>
+                        <li><i class="fas fa-globe"></i> www.dieuduonghieuan.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Trung tâm Hiếu An. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thương hiệu - Trung tâm Hiếu An</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            background: linear-gradient(rgba(46, 125, 50, 0.9), rgba(46, 125, 50, 0.7)),
+                url('images/Hieu An photo-014.jpg') center/cover;
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+            margin-bottom: 60px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .section-title {
+            font-family: 'Lora', serif !important;
+        }
+
+        .brand-section {
+            padding: 80px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .brand-section:last-child {
+            border-bottom: none;
+        }
+
+        .brand-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .brand-content h2 {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .brand-content h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-orange);
+            border-radius: 2px;
+        }
+
+        .brand-content p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .logo-box {
+            background: #fff;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            border: 1px solid #f0f0f0;
+        }
+
+        .logo-box img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .color-palette {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .color-item {
+            flex: 1;
+            text-align: center;
+        }
+
+        .color-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .typography-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .text-sample {
+            padding: 30px;
+            background: #fdfdfd;
+            border-left: 5px solid var(--primary-green);
+            border-radius: 0 15px 15px 0;
+        }
+
+        @media (max-width: 768px) {
+
+            .brand-container,
+            .typography-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-header {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/HA_Logo_Ngang_300DPI_RGB.png" alt="Logo Trung tâm Hiếu An">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="about.html">Về chúng tôi</a></li>
+                    <li><a href="services.html">Dịch vụ</a></li>
+                    <li><a href="news.html">Tin tức</a></li>
+                    <li><a href="brand.html" class="active" style="color: var(--primary-orange);">Thương hiệu</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="btn btn-primary">Tư vấn miễn phí</a>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Thương Hiệu Hiếu An</h1>
+            <p>Hệ thống nhận diện cốt lõi - Sự kết hợp giữa Tâm và Hiếu</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Logo Section -->
+        <section class="brand-section">
+            <div class="brand-container">
+                <div class="brand-content">
+                    <h2>Biểu tượng nhận diện</h2>
+                    <p>Logo Trung tâm Hiếu An được thiết kế tinh tế với hình ảnh vòng tay ôm trọn trái tim, tượng trưng
+                        cho sự che chở, tận tâm và lòng hiếu thảo. Đây là cam kết của chúng tôi về một môi trường chăm
+                        sóc an toàn và giàu tình thương.</p>
+                    <p>Chúng tôi tập trung vào sự tối giản và trang trọng, phản ánh giá trị bền vững của thương hiệu
+                        trong lĩnh vực chăm sóc người cao tuổi.</p>
+                </div>
+                <div class="logo-box">
+                    <img src="images/HA_Logo_Ngang_300DPI_RGB.png" alt="Logo Hiếu An">
+                </div>
+            </div>
+        </section>
+
+        <!-- Color Section -->
+        <section class="brand-section">
+            <div class="brand-container">
+                <div class="logo-box" style="padding: 40px; background: #fafafa; order: 2;">
+                    <div class="color-palette">
+                        <div class="color-item">
+                            <div class="color-circle" style="background: #2E7D32;"></div>
+                            <h4 style="font-family: 'Lora', serif; color: #333;">Deep Green</h4>
+                            <code>#2E7D32</code>
+                        </div>
+                        <div class="color-item">
+                            <div class="color-circle" style="background: #D86518;"></div>
+                            <h4 style="font-family: 'Lora', serif; color: #333;">Earth Orange</h4>
+                            <code>#D86518</code>
+                        </div>
+                        <div class="color-item">
+                            <div class="color-circle" style="background: #FBC02D;"></div>
+                            <h4 style="font-family: 'Lora', serif; color: #333;">Sun Yellow</h4>
+                            <code>#FBC02D</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="brand-content" style="order: 1;">
+                    <h2>Bảng màu cảm xúc</h2>
+                    <p>Hệ màu của Hiếu An được lựa chọn kỹ lưỡng: <strong>Deep Green</strong> đại diện cho sức khỏe và
+                        sự an yên; <strong>Earth Orange</strong> mang đến hơi ấm và sự nhiệt huyết; <strong>Sun
+                            Yellow</strong> là biểu tượng của niềm vui và ánh sáng hy vọng.</p>
+                    <p>Sự kết hợp hài hòa này tạo ra một không gian thị giác ấm cúng, giúp người cao tuổi cảm thấy thân
+                        thuộc như đang ở trong chính gia đình mình.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Typography Section -->
+        <section class="brand-section">
+            <h2 class="section-title" style="font-size: 2.5rem; text-align: center; margin-bottom: 50px;">Hệ thống phông
+                chữ</h2>
+            <div class="typography-grid">
+                <div class="text-sample">
+                    <h3 style="font-size: 3rem; margin-bottom: 10px; color: var(--primary-green);">Lora</h3>
+                    <p style="font-style: italic; margin-bottom: 20px; color: #888;">Tiêu đề và Thông điệp chính</p>
+                    <p class="ha-h1" style="font-size: 1.8rem;">Vẹn tròn chữ Hiếu - Trọn vẹn niềm tin</p>
+                    <p>Lora mang phong cách Serif cổ điển, gợi lên sự tin cậy, trang trọng và truyền thống. Phông chữ
+                        này được sử dụng cho toàn bộ các tiêu đề chính trên website.</p>
+                </div>
+                <div class="text-sample" style="border-left-color: var(--primary-orange);">
+                    <h3
+                        style="font-size: 3rem; margin-bottom: 10px; color: var(--primary-orange); font-family: 'Nunito', sans-serif !important;">
+                        Nunito</h3>
+                    <p style="font-style: italic; margin-bottom: 20px; color: #888;">Nội dung văn bản và Chú dẫn</p>
+                    <p style="font-family: 'Nunito', sans-serif; font-size: 1.2rem; line-height: 1.6;">Nunito là phông
+                        chữ không chân hiện đại, giúp nội dung trở nên dễ đọc và thân thiện với người dùng ở mọi lứa
+                        tuổi.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div
+                        style="background: white; padding: 10px; border-radius: 8px; display: inline-block; margin-bottom: 15px;">
+                        <img src="images/HA_Logo_New_V2.png" alt="Logo Footer" style="height: 40px; display: block;">
+                    </div>
+                    <p>Trung tâm Dưỡng lão và Điều dưỡng Hiếu An - Nơi trao gửi niềm tin, trọn vẹn chữ Hiếu.</p>
+                </div>
+                <div class="footer-col" style="font-family: 'Nunito', sans-serif;">
+                    <h4 style="font-family: 'Lora', serif;">Liên kết nhanh</h4>
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="about.html">Về chúng tôi</a></li>
+                        <li><a href="services.html">Dịch vụ</a></li>
+                        <li><a href="news.html">Tin tức</a></li>
+                        <li><a href="brand.html">Thương hiệu</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" style="font-family: 'Nunito', sans-serif;">
+                    <h4 style="font-family: 'Lora', serif;">Liên hệ</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Lô 72 + 73 Đường 23, KĐT Thành phố Giao lưu, P. Đông
+                            Ngạc, HN</li>
+                        <li><i class="fas fa-phone"></i> +84 866 779 369</li>
+                        <li><i class="fas fa-envelope"></i> contact@dieuduonghieuan.com</li>
+                        <li><i class="fas fa-globe"></i> www.dieuduonghieuan.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Trung tâm Hiếu An. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

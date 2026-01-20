@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Về chúng tôi - Trung tâm Hiếu An</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            background: linear-gradient(rgba(46, 125, 50, 0.9), rgba(46, 125, 50, 0.7)),
+                url('https://images.unsplash.com/photo-1557825835-b55af7b6534e?auto=format&fit=crop&w=1600&q=80') center/cover;
+            padding: 80px 0;
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .story-content {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .value-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            border: 1px solid #eee;
+        }
+
+        .value-card i {
+            font-size: 3rem;
+            color: var(--primary-orange);
+            margin-bottom: 20px;
+        }
+
+        .value-card h3 {
+            color: var(--primary-green);
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/HA_Logo_Ngang_300DPI_RGB.png" alt="Logo Trung tâm Hiếu An">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="about.html" class="active" style="color: var(--primary-orange);">Về chúng tôi</a></li>
+                    <li><a href="services.html">Dịch vụ</a></li>
+                    <li><a href="news.html">Tin tức</a></li>
+                    <li><a href="brand.html">Thương hiệu</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="btn btn-primary">Tư vấn miễn phí</a>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Về Trung Tâm Hiếu An</h1>
+            <p>Ngôi nhà thứ hai tràn đầy yêu thương và sự sẻ chia</p>
+        </div>
+    </section>
+
+    <section class="container" style="margin-bottom: 80px;">
+        <div class="row">
+            <div class="story-content">
+                <h2 class="section-title" style="text-align: left; color: var(--primary-green);">Câu chuyện của chúng
+                    tôi</h2>
+                <p>Xuất phát từ tấm lòng hiếu thảo và mong muốn mang lại một cuộc sống an vui, khỏe mạnh cho những người
+                    cao tuổi, Trung tâm Hiếu An được thành lập với sứ mệnh kiến tạo một không gian sống lý tưởng.</p>
+                <br>
+                <p>Chúng tôi hiểu rằng, khi bước sang dốc bên kia của cuộc đời, điều người già cần nhất không chỉ là
+                    thuốc men hay sự chăm sóc y tế, mà còn là niềm vui tinh thần, là sự bầu bạn và cảm giác được trân
+                    trọng. Tại Hiếu An, mỗi ngày trôi qua là một ngày ý nghĩa với những hoạt động bổ ích, những bữa ăn
+                    ngon miệng và những nụ cười rạng rỡ.</p>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 60px;">
+            <h2 style="text-align: center; color: var(--primary-green); font-size: 2rem;">Giá Trị Cốt Lõi</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Tận Tâm</h3>
+                    <p>Chăm sóc người cao tuổi bằng cả trái tim, như chính cha mẹ ruột của mình.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>An Toàn</h3>
+                    <p>Môi trường thiết kế chuyên biệt, an toàn tuyệt đối, y tế trực 24/7.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-smile"></i>
+                    <h3>An Vui</h3>
+                    <p>Luôn tạo tiếng cười và niềm lạc quan thông qua các hoạt động tinh thần.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" style="background-color: var(--bg-light); padding: 60px 0;">
+        <div class="container about-wrapper">
+            <div class="about-content">
+                <h2>Đội ngũ của chúng tôi</h2>
+                <p>Đội ngũ bác sĩ, điều dưỡng viên tại Hiếu An không chỉ giỏi chuyên môn mà còn được đào tạo bài bản về
+                    tâm lý người cao tuổi. Chúng tôi tự hào là những người bạn đồng hành tin cậy của các cụ.</p>
+                <br>
+                <ul style="list-style: none;">
+                    <li><i class="fas fa-user-md" style="color:var(--primary-orange); margin-right: 10px;"></i> 100%
+                        Nhân sự có chứng chỉ hành nghề.</li>
+                    <li><i class="fas fa-hands-helping" style="color:var(--primary-orange); margin-right: 10px;"></i>
+                        Đào tạo định kỳ hàng tháng.</li>
+                    <li><i class="fas fa-star" style="color:var(--primary-orange); margin-right: 10px;"></i> Thái độ
+                        phục vụ chuẩn mực, nhẹ nhàng.</li>
+                </ul>
+            </div>
+            <div class="about-img">
+                <img src="images/Hieu An photo-018.jpg" alt="Đội ngũ Hiếu An">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div
+                        style="background: white; padding: 10px; border-radius: 8px; display: inline-block; margin-bottom: 15px;">
+                        <img src="images/HA_Logo_Ngang_300DPI_RGB.png" alt="Logo Footer"
+                            style="height: 40px; display: block;">
+                    </div>
+                    <p>Trung tâm Dưỡng lão và Điều dưỡng Hiếu An - Nơi trao gửi niềm tin, trọn vẹn chữ Hiếu.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Liên kết nhanh</h4>
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="about.html">Về chúng tôi</a></li>
+                        <li><a href="services.html">Dịch vụ</a></li>
+                        <li><a href="brand.html">Thương hiệu</a></li>
+                        <li><a href="news.html">Tin tức</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Liên hệ</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Lô 72 + 73 Đường 23, KĐT Thành phố Giao lưu, P. Đông
+                            Ngạc, HN</li>
+                        <li><i class="fas fa-phone"></i> +84 866 779 369</li>
+                        <li><i class="fas fa-envelope"></i> contact@dieuduonghieuan.com</li>
+                        <li><i class="fas fa-globe"></i> www.dieuduonghieuan.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Trung tâm Hiếu An. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
