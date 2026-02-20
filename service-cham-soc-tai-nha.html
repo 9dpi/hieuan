@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chăm sóc tại nhà - Trung tâm Hiếu An</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            background: linear-gradient(rgba(46, 125, 50, 0.9), rgba(46, 125, 50, 0.7)),
+                url('images/Hieu An photo-006.jpg') center/cover;
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+            margin-bottom: 60px;
+        }
+
+        .service-detail-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+            margin-bottom: 80px;
+        }
+
+        .content-main h2 {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-bottom: 30px;
+        }
+
+        .content-main p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .feature-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .feature-list i {
+            color: var(--primary-orange);
+            font-size: 1.2rem;
+        }
+
+        .sidebar-card {
+            background: #fdfdfd;
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid #eee;
+            position: sticky;
+            top: 120px;
+        }
+
+        .sidebar-card h3 {
+            margin-bottom: 20px;
+            color: var(--primary-green);
+        }
+
+        @media (max-width: 992px) {
+            .service-detail-container {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar-card {
+                position: static;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/HA_Logo_Ngang_300DPI_RGB.png" alt="Logo Trung tâm Hiếu An">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="about.html">Về chúng tôi</a></li>
+                    <li><a href="services.html" class="active">Dịch vụ</a></li>
+                    <li><a href="news.html">Tin tức</a></li>
+                    <li><a href="brand.html">Thương hiệu</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="btn btn-primary">Tư vấn miễn phí</a>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Chăm sóc tại nhà</h1>
+            <p>Dịch vụ chăm sóc chuyên nghiệp ngay tại không gian quen thuộc của gia đình</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="service-detail-container">
+            <div class="content-main">
+                <h2>Tận tâm như người thân, chuyên nghiệp như bệnh viện</h2>
+                <p>Dịch vụ chăm sóc tại nhà của Hiếu An mang đến sự an tâm cho gia đình và sự thoải mái cho người cao
+                    tuổi. Chúng tôi cử đội ngũ điều dưỡng và hộ lý lành nghề đến tận nhà để thực hiện các quy trình chăm
+                    sóc y tế và hỗ trợ sinh hoạt, giúp người cao tuổi không phải di chuyển xa mà vẫn nhận được sự chăm
+                    sóc chuẩn mực.</p>
+
+                <img src="images/Hieu An photo-006.jpg" alt="Chăm sóc tại nhà"
+                    style="border-radius: 20px; margin: 20px 0;">
+
+                <h3>Các gói dịch vụ tiêu biểu</h3>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle"></i> <span>Chăm sóc y tế theo giờ hoặc 24/7 tại nhà.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span>Thực hiện các quy trình kỹ thuật: thay băng, cắt chỉ,
+                            đặt ống thông... theo chỉ định.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span>Hỗ trợ ăn uống, vệ sinh cá nhân và vận động nhẹ
+                            nhàng.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span>Theo dõi sát sao tình trạng sức khỏe và báo cáo kịp
+                            thời cho gia đình & bác sĩ.</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span>Đồng hành cùng người cao tuổi trong các buổi tái khám
+                            tại bệnh viện.</span></li>
+                </ul>
+
+                <h3>Lợi ích của dịch vụ</h3>
+                <p>Người cao tuổi được ở trong không gian gần gũi với con cháu, giúp tinh thần luôn thoải mái và lạc
+                    quan. Đồng thời, gia đình hoàn toàn yên tâm khi biết người thân của mình đang được chăm sóc bởi
+                    những chuyên gia có chuyên môn và đạo đức nghề nghiệp cao.</p>
+            </div>
+
+            <div class="sidebar">
+                <div class="sidebar-card">
+                    <h3>Đăng ký tư vấn</h3>
+                    <p style="margin-bottom: 20px;">Hãy liên hệ với chúng tôi để được khảo sát tình trạng sức khỏe tại
+                        nhà và xây dựng kế hoạch chăm sóc phù hợp nhất.</p>
+                    <a href="contact.html" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Gửi yêu cầu
+                        ngay</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div
+                        style="background: white; padding: 10px; border-radius: 8px; display: inline-block; margin-bottom: 15px;">
+                        <img src="images/HA_Logo_Ngang_300DPI_RGB.png" alt="Logo Footer"
+                            style="height: 40px; display: block;">
+                    </div>
+                    <p>Trung tâm Dưỡng lão và Điều dưỡng Hiếu An - Nơi trao gửi niềm tin, trọn vẹn chữ Hiếu.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Liên kết nhanh</h4>
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="about.html">Về chúng tôi</a></li>
+                        <li><a href="services.html">Dịch vụ</a></li>
+                        <li><a href="brand.html">Thương hiệu</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Liên hệ</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Lô 72 + 73 Đường 23, KĐT Thành phố Giao lưu, HN</li>
+                        <li><i class="fas fa-phone"></i> +84 866 779 369</li>
+                        <li><i class="fas fa-envelope"></i> contact@dieuduonghieuan.com</li>
+                        <li><i class="fas fa-globe"></i> www.dieuduonghieuan.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">&copy; 2025 Trung tâm Hiếu An. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
