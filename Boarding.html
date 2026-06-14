@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Hệ thống Biển bảng - Tem nhãn đạt chuẩn BYT | Trung tâm Hiếu An</title>
+    <!-- html2pdf bundle -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #e2e8dc;
+            font-family: 'Segoe UI', 'Roboto', system-ui, -apple-system, sans-serif;
+            padding: 2rem 1rem;
+            color: #1f3b31;
+        }
+
+        /* toolbar PDF */
+        .pdf-toolbar {
+            max-width: 1280px;
+            margin: 0 auto 1.2rem auto;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .btn-pdf {
+            background: #2c5e3f;
+            border: none;
+            padding: 0.7rem 1.8rem;
+            border-radius: 40px;
+            color: white;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-family: inherit;
+        }
+
+        .btn-pdf:hover {
+            background: #1e4a32;
+            transform: translateY(-1px);
+        }
+
+        /* container chính (nội dung xuất PDF) */
+        .document-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 35px -8px rgba(0, 0, 0, 0.12);
+            overflow: hidden;
+        }
+
+        /* header */
+        .hero {
+            background: linear-gradient(135deg, #2c5e3f, #3f7e5a);
+            padding: 1.5rem 2rem;
+            text-align: center;
+            border-bottom: 5px solid #e2bd68;
+        }
+
+        .logo-text {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .brand {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #FDF9EA;
+            letter-spacing: 2px;
+        }
+
+        .slogan {
+            font-size: 1rem;
+            background: rgba(0, 0, 0, 0.15);
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            color: #FFEFC0;
+        }
+
+        .hero-title {
+            margin-top: 0.8rem;
+            color: #E9F5E1;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        /* tiêu đề phần */
+        .section-title {
+            background: #f0f5ea;
+            padding: 0.8rem 2rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #2c5e3f;
+            border-left: 8px solid #e2bd68;
+            margin: 1.5rem 0 0.5rem 0;
+        }
+
+        .section-sub {
+            padding: 0 1.8rem;
+            font-size: 0.85rem;
+            color: #5b6e5e;
+            margin-bottom: 1rem;
+        }
+
+        /* bảng danh sách biển bảng */
+        .sign-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 0.85rem;
+        }
+
+        .sign-table th {
+            background: #e2edda;
+            color: #1f4d38;
+            padding: 12px 10px;
+            text-align: left;
+            font-weight: 700;
+            border-bottom: 2px solid #c4dbbc;
+        }
+
+        .sign-table td {
+            padding: 12px 10px;
+            border-bottom: 1px solid #dee8d6;
+            vertical-align: top;
+        }
+
+        .badge-color {
+            display: inline-block;
+            width: 28px;
+            height: 20px;
+            border-radius: 4px;
+            margin-right: 8px;
+            vertical-align: middle;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .color-label {
+            font-family: monospace;
+            font-size: 0.75rem;
+        }
+
+        .table-caption {
+            margin-top: 8px;
+            font-size: 0.7rem;
+            color: #6a7c68;
+            padding-left: 10px;
+        }
+
+        /* danh sách tem nhãn */
+        .sticker-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+            padding: 0 1.8rem 1.2rem 1.8rem;
+        }
+
+        .sticker-card {
+            background: #fefdf9;
+            border-left: 4px solid #2c5e3f;
+            padding: 0.8rem 1rem;
+            border-radius: 16px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .sticker-title {
+            font-weight: 800;
+            font-size: 1rem;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sticker-spec {
+            font-size: 0.75rem;
+            color: #4a5c48;
+            margin-top: 6px;
+            border-top: 1px dashed #d4e0cc;
+            padding-top: 6px;
+        }
+
+        .footer-note {
+            background: #fafaf2;
+            padding: 1.2rem 2rem;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #4d6a55;
+            border-top: 1px solid #dde6d5;
+            margin-top: 1rem;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .pdf-toolbar {
+                display: none;
+            }
+
+            .btn-pdf {
+                display: none;
+            }
+
+            .hero,
+            .section-title,
+            .sticker-card {
+                break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 720px) {
+
+            .sign-table th,
+            .sign-table td {
+                padding: 8px 6px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pdf-toolbar">
+        <button class="btn-pdf" id="downloadPDFBtn">
+            📄 Tải xuống Hồ sơ biển bảng (PDF)
+        </button>
+    </div>
+
+    <!-- Nội dung chính xuất PDF: Danh sách biển bảng + tem nhãn chuẩn BYT -->
+    <div class="document-container" id="signageContent">
+        <div class="hero">
+            <div class="logo-text">
+                <span class="brand">HỆ THỐNG QUY CHUẨN BIỂN BẢNG</span>
+
+            </div>
+
+        </div>
+
+        <!-- GIỚI THIỆU CHUẨN -->
+        <div style="padding: 1rem 2rem 0 2rem; background: #FEFCF5;">
+            <p style="font-size:0.85rem;">✅ Tuân thủ Thông tư 43/2016/NĐ-CP (PCCC), TCVN 6718:2000 (an toàn) và hướng
+                dẫn kiểm tra chất lượng bệnh viện. <br>✅ Màu sắc, kích thước chuẩn theo quy định y tế Việt Nam.</p>
+        </div>
+
+        <!-- ================= NHÓM 1: BIỂN BÁO AN TOÀN - PCCC ================= -->
+        <div class="section-title">🚨 I. BIỂN BÁO AN TOÀN & PHÒNG CHÁY CHỮA CHÁY (Tiêu chí cơ sở hạ tầng)</div>
+        <div class="section-sub">Màu sắc và kích thước theo Nghị định 43/2016/NĐ-CP, Thông tư 149/2020/TT-BCA.</div>
+        <table class="sign-table" style="width: calc(100% - 3rem); margin: 0 1.5rem;">
+            <thead>
+                <tr>
+                    <th>Tên biển báo</th>
+                    <th>Màu sắc chuẩn</th>
+                    <th>Kích thước (mm)</th>
+                    <th>Vị trí đề xuất</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>🔴 Lối thoát hiểm (EXIT) có đèn nền</td>
+                    <td><span class="badge-color" style="background:#008000;"></span> Xanh lá - chữ trắng</td>
+                    <td>300x120 / 400x150</td>
+                    <td>Hành lang tầng 1,2,3; cầu thang thoát hiểm</td>
+                </tr>
+                <tr>
+                    <td>🧯 Biển chỉ dẫn bình chữa cháy</td>
+                    <td><span class="badge-color" style="background:#E31818;"></span> Nền đỏ - chữ trắng</td>
+                    <td>200x400</td>
+                    <td>Vị trí đặt bình CO2 (các tầng)</td>
+                </tr>
+                <tr>
+                    <td>🚪 Biển "Cấm hút thuốc"</td>
+                    <td><span class="badge-color" style="background:white;"></span> Nền trắng, viền đỏ, chữ đen</td>
+                    <td>300x400 / Ø300</td>
+                    <td>Sảnh tầng 1, phòng sinh hoạt tầng 3, khu nghỉ trưa</td>
+                </tr>
+                <tr>
+                    <td>⚠️ Điện áp nguy hiểm</td>
+                    <td><span class="badge-color" style="background:#FFCC00;"></span> Nền vàng, tam giác đen</td>
+                    <td>Cạnh 250mm</td>
+                    <td>Tủ điện tầng hầm, tầng 2, tầng 3</td>
+                </tr>
+                <tr>
+                    <td>⬆️ Mũi tên chỉ hướng thoát hiểm</td>
+                    <td><span class="badge-color" style="background:#008000;"></span> Xanh lá - trắng</td>
+                    <td>150x300 / 200x300</td>
+                    <td>Giao lộ hành lang, cầu thang</td>
+                </tr>
+                <tr>
+                    <td>🚻 Nhà vệ sinh (người khuyết tật)</td>
+                    <td><span class="badge-color" style="background:#0057A3;"></span> Xanh dương - biểu tượng trắng</td>
+                    <td>250x250</td>
+                    <td>Cửa WC các tầng</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="table-caption">📌 *Biển PCCC bắt buộc có vật liệu phản quang hoặc đèn chiếu sáng dự phòng.</div>
+
+        <!-- ================= NHÓM 2: BIỂN CHỨC NĂNG - HÀNH CHÍNH ================= -->
+        <div class="section-title">🏥 II. BIỂN CHỈ DẪN PHÒNG CHỨC NĂNG & HÀNH CHÍNH</div>
+        <div class="section-sub">Màu sắc chủ đạo xanh y tế - chữ trắng, đảm bảo dễ đọc cho người cao tuổi.</div>
+        <table class="sign-table" style="width: calc(100% - 3rem); margin: 0 1.5rem;">
+            <thead>
+                <tr>
+                    <th>Tên biển</th>
+                    <th>Màu sắc (nền/chữ)</th>
+                    <th>Kích thước</th>
+                    <th>Ghi chú vị trí</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>📋 Phòng Y tế trực / Điều dưỡng</td>
+                    <td>Xanh #2C5E3F / Vàng kem</td>
+                    <td>300x600</td>
+                    <td>Tầng 2 (khu đo HA)</td>
+                </tr>
+                <tr>
+                    <td>📌 Phòng Giám đốc / Hành chính</td>
+                    <td>Màu gỗ công nghiệp / chữ trắng</td>
+                    <td>300x600</td>
+                    <td>Khu vực lễ tân tầng 1</td>
+                </tr>
+                <tr>
+                    <td>🍽️ Phòng ăn & sinh hoạt chung</td>
+                    <td>Cam nhạt #F0A55A / nâu</td>
+                    <td>500x200 (ngang)</td>
+                    <td>Cửa vào tầng 3</td>
+                </tr>
+                <tr>
+                    <td>♿ Lối đi xe lăn (dốc)</td>
+                    <td>Xanh nước biển / hình trắng</td>
+                    <td>300x300</td>
+                    <td>Sảnh tầng 1, lối xuống tầng hầm</td>
+                </tr>
+                <tr>
+                    <td>🧴 Khu vực pha chế / Trà thảo mộc</td>
+                    <td>Xanh bạc hà / đen</td>
+                    <td>200x400</td>
+                    <td>Góc tầng 3 cạnh tủ đựng ấm trà</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- ================= NHÓM 3: NỘI QUY - QUY TRÌNH CHUYÊN MÔN ================= -->
+        <div class="section-title">📜 III. BẢNG NỘI QUY - QUY TRÌNH CHĂM SÓC (Tiêu chí an toàn người bệnh)</div>
+        <div class="section-sub">Treo tại khu vực hành lang chính và phòng điều dưỡng.</div>
+        <table class="sign-table" style="width: calc(100% - 3rem); margin: 0 1.5rem;">
+            <thead>
+                <tr>
+                    <th>Tên bảng / nội quy</th>
+                    <th>Chất liệu / màu sắc</th>
+                    <th>Kích thước chuẩn</th>
+                    <th>Vị trí</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nội quy Trung tâm dành cho người cao tuổi</td>
+                    <td>Mica 5mm, nền xanh rêu, chữ vàng</td>
+                    <td>A2 (420x594)</td>
+                    <td>Sảnh tầng 1, phòng sinh hoạt tầng 3</td>
+                </tr>
+                <tr>
+                    <td>Lịch sinh hoạt hàng ngày (bản cập nhật)</td>
+                    <td>Khung nhôm, nền xanh lá nhạt</td>
+                    <td>A1 (594x841)</td>
+                    <td>Tầng 3 – khu vui chơi</td>
+                </tr>
+                <tr>
+                    <td>Quy trình xử lý té ngã cho NVYT</td>
+                    <td>Decal chống nước, nền cam cảnh báo</td>
+                    <td>400x300</td>
+                    <td>Phòng trực điều dưỡng tầng 2</td>
+                </tr>
+                <tr>
+                    <td>Bảng theo dõi người bệnh đặc biệt (treo đầu giường)</td>
+                    <td>Nhựa cứng màu hồng / vàng</td>
+                    <td>210x297 (A4)</td>
+                    <td>Đầu giường các phòng chăm sóc đặc biệt</td>
+                </tr>
+                <tr>
+                    <td>Hướng dẫn sử dụng chuông khẩn cấp</td>
+                    <td>Decal trong suốt chữ đen</td>
+                    <td>100x150</td>
+                    <td>Cạnh nút chuông phòng ngủ, WC</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- ================= NHÓM 4: TEM NHÃN DÁN (VẬT TƯ - VSMT) ================= -->
+        <div class="section-title">🏷️ IV. TEM NHÃN, DECAL DÁN THEO QUY CHUẨN VỆ SINH - KIỂM SOÁT NHIỄM KHUẨN</div>
+        <div class="section-sub">Đáp ứng tiêu chí 31-40 về quản lý chất thải y tế, an toàn phòng dịch.</div>
+        <div class="sticker-grid">
+            <div class="sticker-card">
+                <div class="sticker-title"><span class="badge-color" style="background:#FFD966;"></span> RÁC THẢI LÂY
+                    NHIỄM</div>Màu nền vàng, biểu tượng đầu lâu xương chéo. Kích thước: 150x100mm. Dán trên thùng rác y
+                tế màu vàng.<div class="sticker-spec">🔖 Thông tư 20/2021/TT-BYT</div>
+            </div>
+            <div class="sticker-card">
+                <div class="sticker-title"><span class="badge-color" style="background:#2E7D32;"></span> RÁC THẢI SINH
+                    HOẠT</div>Nền xanh lá cây, chữ trắng. Kích thước 150x100mm. Dán thùng rác thường khu vực ăn uống.
+                <div class="sticker-spec">♻️ Phân loại tại nguồn</div>
+            </div>
+            <div class="sticker-card">
+                <div class="sticker-title"><span class="badge-color" style="background:#C0E0FF;"></span> VẬT TƯ TIỆT
+                    TRÙNG</div>Nhãn trắng, chữ đỏ, có ô ghi ngày hết hạn. Kích thước 60x30mm. Dùng cho túi bông băng,
+                gạc.<div class="sticker-spec">📅 Theo dõi hạn dùng</div>
+            </div>
+            <div class="sticker-card">
+                <div class="sticker-title"><span class="badge-color" style="background:#F5CBA7;"></span> DUNG DỊCH CỒN
+                    70%</div>Decal nền vàng cảnh báo, chữ đen. KT 100x50mm. Dán trên chai gel sát khuẩn tay nhanh.<div
+                    class="sticker-spec">🧴 Bộ Y tế khuyến cáo</div>
+            </div>
+            <div class="sticker-card">
+                <div class="sticker-title"><span class="badge-color" style="background:#AED6F1;"></span> RỬA TAY SÁT
+                    KHUẨN</div>Hướng dẫn 6 bước rửa tay, nền xanh, hình vẽ. Kích thước 200x300mm. Dán cạnh bồn rửa khu
+                hành lang.<div class="sticker-spec">🧼 Ngăn ngừa nhiễm khuẩn chéo</div>
+            </div>
+            <div class="sticker-card">
+                <div class="sticker-title"><span class="badge-color" style="background:#FFB3BA;"></span> CẢNH BÁO SÀN
+                    ƯỚT - TRƠN TRƯỢT</div>Nền vàng cam, chữ đen, hình vẽ. Kích thước 200x300mm. Đặt tại khu vực lau sàn,
+                cạnh khu ngâm chân.<div class="sticker-spec">⚠️ Quan trọng với người cao tuổi</div>
+            </div>
+        </div>
+
+        <!-- ================= NHÓM 5: BIỂN CẢNH BÁO Y KHOA ================= -->
+        <div class="section-title">⚠️ V. BIỂN BÁO CHUYÊN MÔN – KHU VỰC CHĂM SÓC ĐẶC BIỆT</div>
+        <div class="section-sub">Bắt buộc để đạt tiêu chí an toàn người bệnh trong quá trình thẩm định.</div>
+        <table class="sign-table" style="width: calc(100% - 3rem); margin: 0 1.5rem 1rem 1.5rem;">
+            <thead>
+                <tr>
+                    <th>Biển báo</th>
+                    <th>Màu</th>
+                    <th>Kích thước</th>
+                    <th>Vị trí</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>⚠️ Khu vực dễ té ngã – Cần hỗ trợ</td>
+                    <td>Nền vàng, chữ đen</td>
+                    <td>200x300</td>
+                    <td>Gần cầu thang, khu vực phòng tắm</td>
+                </tr>
+                <tr>
+                    <td>🚫 Cấm mang thực phẩm bên ngoài vào</td>
+                    <td>Trắng/đỏ</td>
+                    <td>250x350</td>
+                    <td>Cửa phòng ăn tầng 3</td>
+                </tr>
+                <tr>
+                    <td>🩺 Phòng cấp cứu / Xử trí ban đầu</td>
+                    <td>Trắng - chữ đỏ</td>
+                    <td>300x400</td>
+                    <td>Tầng 2 (gần phòng đo HA)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="footer-note">
+            <div>📌 Hệ thống biển bảng, tem nhãn được thiết kế dựa trên Thông tư 6858/QĐ-BYT và Nghị định 43/2016/NĐ-CP.
+            </div>
+            <div style="margin-top:5px;">✅ Đáp ứng 83 tiêu chí chất lượng bệnh viện – Trung tâm Dưỡng lão Hiếu An</div>
+            <div style="margin-top:8px;">🌿 Màu sắc phối hợp theo nhận diện thương hiệu: Xanh an lành – Vàng ấm áp</div>
+        </div>
+    </div>
+
+    <script>
+        const btn = document.getElementById('downloadPDFBtn');
+        const content = document.getElementById('signageContent');
+
+        if (btn && content) {
+            btn.addEventListener('click', () => {
+                btn.innerText = '⏳ Đang tạo PDF danh mục...';
+                btn.disabled = true;
+                const opt = {
+                    margin: [0.5, 0.5, 0.5, 0.5],
+                    filename: 'He_thong_bien_ban_tem_nhan_Chuan_BYT_HieuAn.pdf',
+                    image: { type: 'jpeg', quality: 0.96 },
+                    html2canvas: { scale: 2, letterRendering: true },
+                    jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+                };
+                html2pdf().set(opt).from(content).save().then(() => {
+                    btn.innerText = '📄 Tải xuống Hồ sơ biển bảng (PDF)';
+                    btn.disabled = false;
+                }).catch(err => {
+                    console.error(err);
+                    btn.innerText = '⚠️ Lỗi, thử lại';
+                    setTimeout(() => {
+                        btn.innerText = '📄 Tải xuống Hồ sơ biển bảng (PDF)';
+                        btn.disabled = false;
+                    }, 1500);
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>
