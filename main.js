@@ -3,6 +3,16 @@
  * Prevents Right Click, F12, and Source View shortcuts
  */
 
+const menuToggle = document.querySelector('.menu-toggle');
+const mainNav = document.querySelector('nav.main-nav');
+
+if (menuToggle && mainNav) {
+    menuToggle.addEventListener('click', function () {
+        const isOpen = mainNav.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+}
+
 // Disable Right Click
 document.addEventListener('contextmenu', function(e) {
     e.preventDefault();
